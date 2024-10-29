@@ -4,14 +4,35 @@
 :root {
     --font-sans: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
     --font-serif: Lora, Times, serif; /* stylelint-disable-line value-keyword-case */
-    --color-primary-text: var(--color-black);
-    --color-darker-gray: var(--color-black);
+    --color-text-primary: #FFE6D1;
+    --color-text-secondary: #C7C7C7;
+    --color-text-accent: #FF6B6B;
+    --color-background: #0B1416;
+    --color-card-background: #1A2327;
+    --color-card-text-primary: #FFE6D1;
+    --color-card-text-secondary: #C7C7C7;
+    --color-card-text-accent: #FF6B6B;
     --head-nav-gap: 3.2rem;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
 }
 
 .tag-template .gh-main,
 .author-template .gh-main {
     padding-top: 8vmin;
+
+}
+
+
+.gh-head {
+    background-color: var(--color-background);
+}
+
+.gh-foot {
+    background-color: var(--color-background);
 }
 
 .gh-head-menu,
@@ -29,6 +50,11 @@
 
 .gh-latest .gh-card-meta {
     margin-top: 2.4rem;
+}
+
+.gh-card,
+.gh-card-link {
+    background-color: var(--color-card-background);
 }
 
 .gh-wrapper {
@@ -102,7 +128,7 @@
 }
 
 .gh-card-date {
-    color: var(--ghost-accent-color);
+    color: var(--color-card-text-accent);
 }
 
 .gh-card-meta svg {
@@ -178,6 +204,7 @@
 .gh-about-description {
     margin-top: 0.4rem;
     line-height: 1.55;
+    color: var(--color-text-secondary);
 }
 
 .gh-signup {
@@ -186,6 +213,7 @@
 
 .gh-signup-description {
     line-height: 1.55;
+    color: var(--color-text-primary);
 }
 
 .gh-signup .gh-subscribe-input {
@@ -250,6 +278,7 @@
     line-height: 1;
     border: 1px solid var(--color-light-gray);
     border-radius: 32px;
+    border-color: var(--color-card-background);
 }
 
 .gh-recommendations .recommendations {
@@ -413,12 +442,14 @@
 
 .gh-subscribe-btn {
     margin-top: 3.2rem;
-    color: var(--ghost-accent-color);
-    background-color: #fff;
+    background-color: var(--color-text-accent);
+    color: var(--color-card-text-primary);
 }
 
 .gh-article:not(.no-image) .gh-article-header > * {
     grid-column: wide-start / wide-end;
+    background-color: var(--color-card-background);
+
 }
 
 .gh-article-meta {
@@ -426,7 +457,7 @@
     font-size: 1.2rem;
     font-weight: 500;
     line-height: 1;
-    color: var(--color-secondary-text);
+    color: var(--color-text-secondary);
     text-transform: uppercase;
 }
 
@@ -445,7 +476,7 @@
     margin-top: 1.6rem;
     font-size: 2.8rem;
     line-height: 1.35;
-    color: var(--color-darker-gray);
+    color: var(--color-card-text-secondary);
 }
 
 .gh-article-footer {
@@ -502,6 +533,7 @@
     font-weight: 400;
     letter-spacing: 0;
     word-break: break-word;
+    color: var(--color-text-secondary);
 }
 
 .gh-pagehead {
@@ -513,6 +545,7 @@
     padding-top: 0.8rem;
     font-size: 1.4rem;
     line-height: 1;
+    background-color: var(--color-card-background);
 }
 
 .gh-pagehead-title {
@@ -524,7 +557,7 @@
 .gh-pagehead-description {
     margin-top: 0.8rem;
     line-height: 1.45;
-    color: var(--color-secondary-text);
+    color: var(--color-text-secondary);
 }
 
 .gh-tag-label {
@@ -554,7 +587,7 @@
 
 .gh-author-location {
     margin-left: -4px;
-    color: var(--color-darker-gray);
+    color: var(--color-text-primary);
 }
 
 .gh-author-website {
@@ -608,6 +641,7 @@
     .gh-subscribe {
         padding: 5.6rem 0;
         margin-top: 8rem;
+        background-color: var(--color-card-background);
     }
 
     .gh-pagehead {
@@ -647,6 +681,11 @@
         max-width: 480px;
         padding-top: 0;
     }
+}
+
+.gh-subscribe-input {
+    background-color: var(--color-card-background);
+    color: var(--color-card-text-primary);
 }
 
 @supports (-moz-appearance: none) {
